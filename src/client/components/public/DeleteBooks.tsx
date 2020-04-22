@@ -58,7 +58,7 @@ class DeleteBooks extends React.Component<DeleteBooksProps, DeleteBooksState> {
                  
                   <button
                     type="submit"
-                    className="btn btn-warning d-block border border-primary mt-2 p-2 shadow"
+                    className="btn btn-warning d-block border border-primary mt-2 p-2 ml-4 shadow"
                     onClick={() => this.handleBookDelete(book.id)}
                   >
                     Delete Book
