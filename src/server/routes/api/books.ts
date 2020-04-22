@@ -6,7 +6,7 @@ import { isGuest } from '../../middleware/auth-checkpoints';
 
 const router = express.Router();
 
-router.post('/', isAdmin, async (req, res) => {
+router.post('/', isAdmin, async (req:any, res) => {
 	console.log('Got to Node server', req.user);
 	const {title, firstName, lastName} = req.body;
 	try {
@@ -18,7 +18,7 @@ router.post('/', isAdmin, async (req, res) => {
 	}
 });
 
-router.delete('/:id', isAdmin, async (req, res) => {
+router.delete('/:id', isAdmin, async (req:any, res) => {
     let id = req.params.id;
 	try {
 		let result = await DB.Books.deleteBook(id);
@@ -29,7 +29,7 @@ router.delete('/:id', isAdmin, async (req, res) => {
 	}
 });
 
-router.patch('/:id', isAdmin, async (req, res) => {
+router.patch('/:id', isAdmin, async (req:any, res) => {
     let id = req.params.id;
     const {title, firstname, lastname} = req.body;
 	try {
@@ -52,7 +52,7 @@ router.get('/', async(req, res, next) =>{
     
 })
 
-router.get('/:id',   async(req, res, next) =>{
+router.get('/:id',   async(req:any, res, next) =>{
     let id = req.params.id;
     try{
         let book = await DB.Books.getSingleBook(id);
