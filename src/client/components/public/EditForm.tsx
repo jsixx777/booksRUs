@@ -4,8 +4,8 @@ import { RouteComponentProps } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Button } from 'react-bootstrap';
 
-class EditForm extends React.Component<ISingleBookProps, ISingleBookState> {
-    constructor(props: ISingleBookProps) {
+class EditForm extends React.Component<IEditFormProps, IEditFormState> {
+    constructor(props: IEditFormProps) {
         super(props);
         this.state = {
             book: {
@@ -78,8 +78,8 @@ class EditForm extends React.Component<ISingleBookProps, ISingleBookState> {
         );
     }
 }
-interface ISingleBookProps extends RouteComponentProps<{ id: string }> { }
-interface ISingleBookState {
+interface IEditFormProps extends RouteComponentProps<{ id: string }> { }
+interface IEditFormState {
     book: {
         id: number;
         title: string;
