@@ -7,7 +7,7 @@ import { StripeProvider, Elements } from "react-stripe-elements";
 import Form from "./components/public/Form";
 
 import "./scss/app";
-//import "bootstrap/dist/css/bootstrap.min.css";
+
 
 import Navbar from "./components/shared/Navbar";
 import AllBooks from "./components/public/AllBooks";
