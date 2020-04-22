@@ -61,7 +61,7 @@ export default class Example extends React.Component<
 
 
           <Link to={"/"} className="h4 mt-1" style={{ color: "#FFFAF0" }}>
-            Book Store
+            Books R Us
           </Link>
 
 
